@@ -21,7 +21,8 @@ export const listProducts =
       );
       dispatch({
         type: PRODUCT_LIST_SUCCESS,
-        payload: keyword.length ? searchResult : products,
+        payload:
+          keyword.length && searchResult.length ? searchResult : products,
       });
     } catch (err) {
       dispatch({

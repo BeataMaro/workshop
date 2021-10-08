@@ -1,6 +1,6 @@
 # Workshop
 
-The Workshop "Przebrała się miarka" is website of a tailor's workshop. It is a blog and a virtual store on the Internet where customers can browse the catalog and select products of interest. The selected items may be collected in a shopping cart. At checkout time, the items in the shopping cart will be presented as an order. At that time, more information will be needed to complete the transaction.
+The Workshop "Przebrała się miarka" is a website of a tailor's workshop. It is a fashion blog and a virtual store. Customers can browse the catalog and select products of interest. The selected items may be collected in a shopping cart. 
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)

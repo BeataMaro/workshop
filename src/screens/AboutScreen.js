@@ -67,15 +67,17 @@ const About = () => {
             </Col>
           </Row>
           <Row className='d-flex align-items-center'>
-            <Col md={6}>
-              <Image
-                src='/images/alexander-andrews-black-machine-unsplash.jpg'
-                alt=''
-              />
-            </Col>
-            <Col md={6}>
-              <Image src='/images/pexels-cottonbro-measure.jpg' alt='' />
-            </Col>
+            <Card className='d-flex flex-row'>
+              <Col md={6}>
+                <Card.Img
+                  src='/images/alexander-andrews-black-machine-unsplash.jpg'
+                  alt=''
+                />
+              </Col>
+              <Col md={6}>
+                <Card.Img src='/images/pexels-cottonbro-measure.jpg' alt='' />
+              </Col>
+            </Card>
           </Row>
         </section>
       </Container>

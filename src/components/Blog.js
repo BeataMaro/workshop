@@ -18,15 +18,15 @@ const Blog = () => {
                 <Card.Img src='/images/pexels-anna-shvets-dog.jpg' alt='' />
               </Col>
               <Col md={6}>
-                <Card.Body>
+                <Card.Body className='py-5'>
                   <Card.Title>Na jesienny spacer</Card.Title>
-                  <Card.Text>Bądź w zgodzie z&nbsp;naturą.</Card.Text>
+                  <Card.Text>Bądź w&nbsp;zgodzie z&nbsp;naturą.</Card.Text>
                 </Card.Body>
               </Col>
             </Card>
             <Card className='d-flex flex-row'>
               <Col md={6}>
-                <Card.Body>
+                <Card.Body className='py-5'>
                   <Card.Title>Wełna po godzinach</Card.Title>
                   <Card.Text>Najlepszy sposób na wygodną elegancję.</Card.Text>
                 </Card.Body>
@@ -45,14 +45,15 @@ const Blog = () => {
                 <Card.Img src='/images/pexels-arina-krasnikova.jpg' alt='' />
               </Col>
               <Col md={6}>
-                <Card.Body>
+                <Card.Body className='py-5'>
                   <Card.Title>Ponadczasowa wełna</Card.Title>
+                  <Card.Text>Rękodzieło od pokoleń</Card.Text>
                 </Card.Body>
               </Col>
             </Card>
             <Card className='d-flex flex-row'>
               <Col md={6}>
-                <Card.Body>
+                <Card.Body className='py-5'>
                   <Card.Title>Total look nie dla każdego? </Card.Title>
                 </Card.Body>
               </Col>
@@ -65,7 +66,7 @@ const Blog = () => {
             </Card>
             <Card className='d-flex flex-row'>
               <Col lg={6}>
-                <Card.Body>
+                <Card.Body className='py-5'>
                   <Card.Title>Naturalne włókna</Card.Title>
                 </Card.Body>
               </Col>
@@ -85,7 +86,7 @@ const Blog = () => {
                 />
               </Col>
               <Col md={6}>
-                <Card.Body>
+                <Card.Body className='py-5'>
                   <Card.Title>Nietuzinkowe projekty</Card.Title>
                 </Card.Body>
               </Col>

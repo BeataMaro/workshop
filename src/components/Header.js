@@ -29,6 +29,13 @@ const Header = ({ shop }) => {
               )}
               {shop && (
                 <>
+                  <LinkContainer to='/about'>
+                    <Nav.Link>
+                      {" "}
+                      <FontAwesomeIcon icon={faWaveSquare} className='me-1' />O
+                      nas
+                    </Nav.Link>
+                  </LinkContainer>
                   <LinkContainer to='/'>
                     <Nav.Link>
                       <FontAwesomeIcon icon={faRedhat} className='me-1' />
@@ -48,12 +55,6 @@ const Header = ({ shop }) => {
                   </LinkContainer>
                 </>
               )}
-              <LinkContainer to='/about'>
-                <Nav.Link>
-                  {" "}
-                  <FontAwesomeIcon icon={faWaveSquare} className='me-1' />O nas
-                </Nav.Link>
-              </LinkContainer>
 
               {!shop && (
                 <LinkContainer to='/shop'>

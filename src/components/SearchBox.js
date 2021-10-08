@@ -14,7 +14,7 @@ const SearchBox = ({ history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    keyword.trim() ? history.push(`/search/${keyword}`) : history.push("/");
+    keyword.trim() ? history.push(`/search/${keyword}`) : history.push("/shop");
   };
   return (
     <Form onSubmit={submitHandler} className='d-flex m-3 m-lg-0'>

@@ -14,7 +14,13 @@ export const listProducts =
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
 
-      dispatch({ type: PRODUCT_LIST_SUCCESS, payload: products });
+      const searchResult = products.filter((prod) =>
+        prod.name.toUpperCase().includes(keyword.toUpperCase())
+      );
+      dispatch({
+        type: PRODUCT_LIST_SUCCESS,
+        payload: keyword.length ? searchResult : products,
+      });
     } catch (err) {
       dispatch({
         type: PRODUCT_LIST_FAIL,

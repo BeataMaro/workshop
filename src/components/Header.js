@@ -19,7 +19,7 @@ const Header = ({ shop }) => {
           <LinkContainer to='/'>
             <Navbar.Brand>Przebrała się miarka</Navbar.Brand>
           </LinkContainer>
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Toggle aria-controls='basic-navbar-nav' className='ms-auto' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
               {shop && (
@@ -33,26 +33,21 @@ const Header = ({ shop }) => {
                   <FontAwesomeIcon icon={faWaveSquare} className='me-1' />O nas
                 </Nav.Link>
               </LinkContainer>
+              <LinkContainer to='/'>
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faRedhat} className='me-1' />
+                  Blog
+                </Nav.Link>
+              </LinkContainer>
               {shop && (
-                <>
-                  <LinkContainer to='/'>
-                    <Nav.Link>
-                      <FontAwesomeIcon icon={faRedhat} className='me-1' />
-                      Blog
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to='/cart'>
-                    <Nav.Link>
-                      <Link to='/cart'>
-                        <FontAwesomeIcon
-                          icon={faShoppingCart}
-                          className='me-1'
-                        />
-                        Koszyk
-                      </Link>
-                    </Nav.Link>
-                  </LinkContainer>
-                </>
+                <LinkContainer to='/cart'>
+                  <Nav.Link>
+                    <Link to='/cart'>
+                      <FontAwesomeIcon icon={faShoppingCart} className='me-1' />
+                      Koszyk
+                    </Link>
+                  </Nav.Link>
+                </LinkContainer>
               )}
 
               {!shop && (

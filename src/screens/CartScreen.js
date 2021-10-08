@@ -19,7 +19,7 @@ import Message from "../components/Message";
 //actions
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
-const CartScreen = ({ match, history, location }) => {
+const CartScreen = ({ match, location }) => {
   const productId = match.params.id;
 
   const cart = useSelector((state) => state.cart);

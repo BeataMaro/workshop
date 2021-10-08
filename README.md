@@ -3,8 +3,10 @@
 The Workshop "Przebrała się miarka" is website of a tailor's workshop. It is a blog and a virtual store on the Internet where customers can browse the catalog and select products of interest. The selected items may be collected in a shopping cart. At checkout time, the items in the shopping cart will be presented as an order. At that time, more information will be needed to complete the transaction.
 
 
-[![React Version](https://img.shields.io/badge/react-3.6-brightgreen.svg)](https://python.org)
-[![Redux Version](https://img.shields.io/badge/redux-2.00-brightgreen.svg)](https://djangoproject.com)
+[![React Version](https://img.shields.io/badge/react-17.0.2-brightgreen.svg)](https://reactjs.org/)
+[![React-Redux Version](https://img.shields.io/badge/react-redux-7.2.5-brightgreen.svg)](https://react-redux.js.org/)
+[![React-Bootstrap Version](https://img.shields.io/badge/react-bootstrap-2.0-brightgreen.svg)](https://react-bootstrap.github.io/)
+[![Bootstrap Version](https://img.shields.io/badge/bootstrap-5.1.2-brightgreen.svg)](https://getbootstrap.com/)
 
 
 

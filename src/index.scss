@@ -1,0 +1,28 @@
+@import "./bootstrap.min.css";
+
+$blue: royalblue;
+
+body {
+  overflow-x: hidden;
+  h1 {
+    color: $blue;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  main {
+    min-height: 80vh;
+    background-color: var(--bs-white);
+
+  }
+}

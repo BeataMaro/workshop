@@ -1,6 +1,6 @@
 const theme = {
   colors: {
-    main: "#34744f",
+    main: "#04160c",
     dark: "#263238",
     grey: "#4e616a",
     lightgrey: "#a5aaaf",
@@ -13,8 +13,8 @@ const theme = {
   },
 
   shadows: {
-    boxShadow: "1px 3px 12px rgba(0, 0, 0, 0.08)",
-    boxShadowHover: "1px 3px 15px rgba(0, 0, 0, 0.2)",
+    boxShadow: "1px 3px 12px rgba(0, 0, 0, 0.2)",
+    boxShadowHover: "1px 3px 15px rgba(0, 0, 0, 0.4)",
   },
 
   fonts: {
@@ -22,7 +22,8 @@ const theme = {
   },
 
   transitions: {
-    quick: "all .3s ease-in",
+    slow: "all .3s ease-in",
+    quick: "all .2s ease-in",
   },
 };
 

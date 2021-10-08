@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import { Form, Button } from "react-bootstrap";
+
+const StyledButton = styled(Button)`
+  background-color: ${({ theme }) => theme.colors.gold};
+`;
 
 const SearchBox = ({ history }) => {
   const [keyword, setKeyword] = useState("");
@@ -20,9 +25,9 @@ const SearchBox = ({ history }) => {
         onChange={(e) => setKeyword(e.target.value)}
         className='me-sm-1 ms-sm-3'
       ></Form.Control>
-      <Button type='submit' variant='info' size='md' className='me-5'>
+      <StyledButton type='submit' size='md' className='me-5'>
         <FontAwesomeIcon icon={faSearch} className='align-self-center' />
-      </Button>
+      </StyledButton>
     </Form>
   );
 };

@@ -1,13 +1,19 @@
 import React from "react";
-import { Container, Row, Col, Card, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 import Header from "../components/Header";
 
 const About = () => {
   return (
     <>
-      <Header shop />
+      <Header />
       <Container>
+        <Link to='/'>
+          <Button variant='light' className='p-0 py-2'>
+            Wstecz
+          </Button>
+        </Link>
         <section className='my-5'>
           <h2>O firmie</h2>
           <Row>

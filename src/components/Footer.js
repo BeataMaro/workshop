@@ -1,6 +1,12 @@
 import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Row, Col, Container, ListGroup, Card } from "react-bootstrap";
+
+const StyledRow = styled(Row)`
+  background-color: ${({ theme }) => theme.colors.main};
+  color: ${({ theme }) => theme.colors.grey};
+`;
 
 const Footer = () => {
   return (
@@ -53,10 +59,16 @@ const Footer = () => {
             </Col>
           </Row>
         </article>
-        <Row className='px-5 py-3 bg-dark text-muted'>
+        <StyledRow className='px-5 py-3'>
           <span>Wszelkie prawa zastrzeżone. &copy; 2021.</span>
-          <span>Video by Pavel Danilyuk from Pexels</span>
-        </Row>
+          <a
+            href='https://www.pexels.com/pl-pl/@pavel-danilyuk'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <span>Video by Pavel Danilyuk from Pexels</span>
+          </a>
+        </StyledRow>
       </Container>
     </footer>
   );

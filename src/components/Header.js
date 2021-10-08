@@ -3,7 +3,10 @@ import { Link, Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faShoppingCart,
+  faWaveSquare,
+} from "@fortawesome/free-solid-svg-icons";
 import { faRedhat } from "@fortawesome/free-brands-svg-icons";
 
 import SearchBox from "./SearchBox";
@@ -19,9 +22,11 @@ const Header = ({ shop }) => {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <Route
-                render={({ history }) => <SearchBox history={history} />}
-              />
+              {shop && (
+                <Route
+                  render={({ history }) => <SearchBox history={history} />}
+                />
+              )}
               {shop && (
                 <>
                   <LinkContainer to='/'>
@@ -43,6 +48,12 @@ const Header = ({ shop }) => {
                   </LinkContainer>
                 </>
               )}
+              <LinkContainer to='/about'>
+                <Nav.Link>
+                  {" "}
+                  <FontAwesomeIcon icon={faWaveSquare} className='me-1' />O nas
+                </Nav.Link>
+              </LinkContainer>
 
               {!shop && (
                 <LinkContainer to='/shop'>

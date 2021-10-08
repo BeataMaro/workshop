@@ -5,17 +5,19 @@ import { Card } from "react-bootstrap";
 import Rating from "./Rating";
 
 const StyledCard = styled(Card)`
-  background-color: #ded6d9;
+  min-height: 60vh;
+  background-color: ${({ theme }) => theme.colors.greyblue};
   cursor: pointer;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-
+  box-shadow: ${({ theme }) => theme.shadows.boxShadow};
+  transition: ${({ theme }) => theme.transitions.slow};
   a {
     overflow: hidden;
     img {
-      transition: 0.2s ease-in;
+      transition: ${({ theme }) => theme.transitions.quick};
     }
   }
   &:hover {
+    box-shadow: ${({ theme }) => theme.shadows.boxShadowHover};
     img {
       transform: scale(1.1);
     }

@@ -14,8 +14,10 @@ export const listProducts =
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
 
-      const searchResult = products.filter((prod) =>
-        prod.name.toUpperCase().includes(keyword.toUpperCase())
+      const searchResult = products.filter(
+        (prod) =>
+          prod.name.toUpperCase().includes(keyword.toUpperCase()) ||
+          prod.description.toUpperCase().includes(keyword.toUpperCase())
       );
       dispatch({
         type: PRODUCT_LIST_SUCCESS,

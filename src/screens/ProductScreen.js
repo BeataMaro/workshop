@@ -72,9 +72,8 @@ const ProductScreen = ({ match, history }) => {
                   />
                 </ListGroupItem>
                 <ListGroupItem>{product.price}zł</ListGroupItem>
-                <ListGroupItem>
-                  Opis produktu: {product.description}
-                </ListGroupItem>
+                <ListGroupItem as='h4'>Opis produktu:</ListGroupItem>
+                <ListGroupItem>{product.description}</ListGroupItem>
               </ListGroup>
             </Col>
             <Col md={3}>

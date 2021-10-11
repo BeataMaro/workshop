@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Link, Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Container, Navbar, Nav } from "react-bootstrap";
@@ -11,13 +12,22 @@ import { faRedhat } from "@fortawesome/free-brands-svg-icons";
 
 import SearchBox from "./SearchBox";
 
+const StyledBrand = styled(Navbar.Brand)`
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+`;
+
+const StyledNavLink = styled(Nav.Link)`
+  font-size: 1.2rem;
+`;
+
 const Header = ({ shop }) => {
   return (
     <header>
       <Navbar bg='light' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand>Przebrała się miarka</Navbar.Brand>
+            <StyledBrand>Przebrała się miarka</StyledBrand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' className='ms-auto' />
           <Navbar.Collapse id='basic-navbar-nav'>
@@ -28,35 +38,31 @@ const Header = ({ shop }) => {
                 />
               )}
               <LinkContainer to='/about'>
-                <Nav.Link>
-                  {" "}
+                <StyledNavLink>
                   <FontAwesomeIcon icon={faWaveSquare} className='me-1' />O nas
-                </Nav.Link>
+                </StyledNavLink>
               </LinkContainer>
               <LinkContainer to='/'>
-                <Nav.Link>
+                <StyledNavLink>
                   <FontAwesomeIcon icon={faRedhat} className='me-1' />
                   Blog
-                </Nav.Link>
+                </StyledNavLink>
               </LinkContainer>
               {shop && (
                 <LinkContainer to='/cart'>
-                  <Nav.Link>
-                    <Link to='/cart'>
-                      <FontAwesomeIcon icon={faShoppingCart} className='me-1' />
-                      Koszyk
-                    </Link>
-                  </Nav.Link>
+                  <StyledNavLink>
+                    <FontAwesomeIcon icon={faShoppingCart} className='me-1' />
+                    Koszyk
+                  </StyledNavLink>
                 </LinkContainer>
               )}
 
               {!shop && (
                 <LinkContainer to='/shop'>
-                  <Nav.Link>
-                    {" "}
+                  <StyledNavLink>
                     <FontAwesomeIcon icon={faShoppingCart} className='me-1' />
                     Sklep
-                  </Nav.Link>
+                  </StyledNavLink>
                 </LinkContainer>
               )}
             </Nav>

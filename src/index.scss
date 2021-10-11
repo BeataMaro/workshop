@@ -1,12 +1,12 @@
 @import "./bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
 
-$blue: royalblue;
 
 body {
   overflow-x: hidden;
-  h1 {
-    color: $blue;
-  }
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+ 
 
   a {
     text-decoration: none;

@@ -14,15 +14,15 @@ export const listProducts =
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
 
-      const searchResult = products.filter(
-        (prod) =>
-          prod.name.toUpperCase().includes(keyword.toUpperCase()) ||
-          prod.description.toUpperCase().includes(keyword.toUpperCase())
+      const regex = new RegExp(`${keyword}`, "gi");
+
+      const searchResult = await products.filter(
+        (prod) => prod.name.match(regex) || prod.description.match(regex)
       );
+
       dispatch({
         type: PRODUCT_LIST_SUCCESS,
-        payload:
-          keyword.length && searchResult.length ? searchResult : products,
+        payload: searchResult.length ? searchResult : products,
       });
     } catch (err) {
       dispatch({

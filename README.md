@@ -1,3 +1,5 @@
+##Website demo: https://przebrala-sie-miarka.netlify.app/
+
 # Workshop
 
 The Workshop "Przebrała się miarka" is a website of a tailor's workshop. It is a fashion blog and a virtual store. Customers can browse the catalog and select products of interest. The selected items may be collected in a shopping cart. 

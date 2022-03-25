@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM, REDEEM_DISCOUNT_VOUCHER } from "../constants/cartConstants";
 import products from "../products";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
@@ -21,3 +21,7 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
 export const removeFromCart = (id) => async (dispatch) => {
   dispatch({ type: CART_REMOVE_ITEM, payload: id });
 };
+
+export const redeemDicountVoucher = (discount) => async (dispatch) => {
+  dispatch({ type: REDEEM_DISCOUNT_VOUCHER, payload: discount})
+}

@@ -37,7 +37,7 @@ const Product = ({ product }) => {
         <Card.Text as='div'>
           <Rating rate={product.rating} numReviews={product.numReviews} />
         </Card.Text>
-        <Card.Text as='h4'> {product.price}zł</Card.Text>
+        <Card.Text as='h4'> {product.price}$</Card.Text>
       </Card.Body>
     </StyledCard>
   );

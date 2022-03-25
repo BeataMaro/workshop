@@ -16,6 +16,8 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 import Header from "../components/Header";
 import Message from "../components/Message";
+import VoucherifyCode from "../components/VoucherifyValidate";
+import VoucherifyRedeemComponent from "../components/VoucherifyRedeem";
 //actions
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
@@ -24,7 +26,9 @@ const CartScreen = ({ match, location }) => {
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
-  console.log(cartItems);
+  // console.log(cartItems);
+  const { discount } = cart;
+  console.log("wartość: ", discount);
 
   const qty = Number(location?.search?.split("=")[1]) || 1; //query params ?qty=4
   // const qty = location.search ? Number(location.search.split("=")[1]) : 1;
@@ -41,18 +45,26 @@ const CartScreen = ({ match, location }) => {
   const handleRemove = (id) => {
     dispatch(removeFromCart(id));
   };
+  const discountPrice = () => {
+    const totalPrice = cartItems.reduce(
+      (acc, item) => acc + item.qty * item.price,
+      0
+    );
+    const discountPrice = totalPrice - (totalPrice / 100) * discount;
+    return discountPrice.toFixed(2);
+  };
   return (
     <>
       <Header shop />
       <Container>
-        <Row className='my-5'>
+        <Row className="my-5">
           <Col md={8}>
             <h3>Koszyk</h3>
 
             {cartItems.length < 1 ? (
               <Message>Koszyk jest pusty.</Message>
             ) : (
-              <ListGroup variant='flush'>
+              <ListGroup variant="flush">
                 {cartItems.map((product) => (
                   <ListGroup.Item key={product.product}>
                     <Row>
@@ -69,7 +81,7 @@ const CartScreen = ({ match, location }) => {
                           {product.name}
                         </Link>
                       </Col>
-                      <Col sm={2}>{product.price}zł</Col>
+                      <Col sm={2}>{product.price}$</Col>
 
                       <Col sm={2}>
                         <Form.Select
@@ -90,7 +102,7 @@ const CartScreen = ({ match, location }) => {
                       </Col>
                       <Col sm={2}>
                         <Button onClick={() => handleRemove(product.product)}>
-                          <FontAwesomeIcon icon={faTrashAlt} className='me-2' />
+                          <FontAwesomeIcon icon={faTrashAlt} className="me-2" />
                           Usuń
                         </Button>
                       </Col>
@@ -101,31 +113,30 @@ const CartScreen = ({ match, location }) => {
             )}
           </Col>
           <Col md={4}>
-            <Card className='my-5'>
-              <ListGroup variant='flush'>
+            <Card className="my-5">
+              <ListGroup variant="flush">
                 <ListGroup.Item>
                   <h5>
                     Podsumowanie: (
                     {cartItems.reduce((acc, item) => acc + item.qty, 0)})
                   </h5>
-                  {cartItems
-                    .reduce((acc, item) => acc + item.qty * item.price, 0)
-                    .toFixed(2)}
-                  zł
+                  {discountPrice()}$
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Button
-                    type='button'
-                    className='btn-block'
+                    type="button"
+                    className="btn-block"
                     disabled={cartItems.length === 0}
                     onClick={handleRemove}
                   >
                     Kup teraz
                   </Button>
                 </ListGroup.Item>
+                <VoucherifyCode />
+                <VoucherifyRedeemComponent />
               </ListGroup>
               <Card.Footer>
-                <Link className='btn btn-light' to='/shop'>
+                <Link className="btn btn-light" to="/shop">
                   Kontynuuj zakupy
                 </Link>
               </Card.Footer>

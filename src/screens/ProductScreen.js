@@ -62,18 +62,18 @@ const ProductScreen = ({ match, history }) => {
             </Col>
             <Col md={3}>
               <ListGroup variant='flush'>
-                <ListGroupItem variant='light'>
+                <StyledListGroupItem variant='light'>
                   <h3>{product.name}</h3>
-                </ListGroupItem>
-                <ListGroupItem>
+                </StyledListGroupItem>
+                <StyledListGroupItem>
                   <Rating
                     rate={product.rating}
                     numReviews={`${product.numReviews} ocen`}
                   />
-                </ListGroupItem>
-                <ListGroupItem>{product.price}zł</ListGroupItem>
-                <ListGroupItem as='h4'>Opis produktu:</ListGroupItem>
-                <ListGroupItem>{product.description}</ListGroupItem>
+                </StyledListGroupItem>
+                <StyledListGroupItem>{product.price}$</StyledListGroupItem>
+                <StyledListGroupItem as='h4'>Opis produktu:</StyledListGroupItem>
+                <StyledListGroupItem>{product.description}</StyledListGroupItem>
               </ListGroup>
             </Col>
             <Col md={3}>
@@ -82,7 +82,7 @@ const ProductScreen = ({ match, history }) => {
                   <StyledListGroupItem>
                     <Row>
                       <Col>Suma:</Col>
-                      <Col>{product.price}zł</Col>
+                      <Col>{product.price}$</Col>
                     </Row>
                   </StyledListGroupItem>
                   <StyledListGroupItem>

@@ -2,7 +2,7 @@ import React from 'react'
 import '@voucherify/react-widget/dist/voucherify.css'
 import { VoucherifyValidate } from '@voucherify/react-widget'
 
-const VoucherifyCode = () => {
+const VoucherifyValidateComponent = () => {
 
     const onValidatedResponse = response => {
 		console.log('Do something with response: ', response)
@@ -15,13 +15,12 @@ const VoucherifyCode = () => {
     <VoucherifyValidate
 			clientApplicationId={process.env.REACT_APP_VOUCHERIFY_CLIENT_ID}
 			clientSecretKey={process.env.REACT_APP_VOUCHERIFY_CLIENT_SECRET_KEY}
-			textPlaceholder="e.g. Testing7fjWdr"
+			textPlaceholder="YOUR PROMO CODE"
 			trackingId="gustav@purpleson.com"
-			amount
 			onValidated={onValidatedResponse}
 			onError={onErrorResponse}
 		/>
   )
 }
 
-export default VoucherifyCode;
+export default VoucherifyValidateComponent;

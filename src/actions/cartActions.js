@@ -22,6 +22,7 @@ export const removeFromCart = (id) => async (dispatch) => {
   dispatch({ type: CART_REMOVE_ITEM, payload: id });
 };
 
-export const redeemDicountVoucher = (discount) => async (dispatch) => {
+export const redeemDicountVoucher = (discount) => async (dispatch, getState) => {
   dispatch({ type: REDEEM_DISCOUNT_VOUCHER, payload: discount})
+  localStorage.setItem("Discount %", JSON.stringify(getState().cart.discount));
 }

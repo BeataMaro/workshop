@@ -7,12 +7,14 @@ import AboutScreen from "./screens/AboutScreen";
 import ShopScreen from "./screens/ShopScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
+import PromoBar from "./components/PromoBar";
 import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        <PromoBar />
         <main className='py-3 justify-content-center'>
           <Switch>
             <Route path='/' exact component={BlogScreen} />

@@ -16,7 +16,7 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 import Header from "../components/Header";
 import Message from "../components/Message";
-import VoucherifyCode from "../components/VoucherifyValidate";
+import VoucherifyValidateComponent from "../components/VoucherifyValidate";
 import VoucherifyRedeemComponent from "../components/VoucherifyRedeem";
 //actions
 import { addToCart, removeFromCart } from "../actions/cartActions";
@@ -114,6 +114,11 @@ const CartScreen = ({ match, location }) => {
           </Col>
           <Col md={4}>
             <Card className="my-5">
+                {/* VOUCHERIFY */}
+              <ListGroup>
+                <VoucherifyValidateComponent />
+                <VoucherifyRedeemComponent />
+              </ListGroup>
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <h5>
@@ -132,8 +137,6 @@ const CartScreen = ({ match, location }) => {
                     Kup teraz
                   </Button>
                 </ListGroup.Item>
-                <VoucherifyCode />
-                <VoucherifyRedeemComponent />
               </ListGroup>
               <Card.Footer>
                 <Link className="btn btn-light" to="/shop">

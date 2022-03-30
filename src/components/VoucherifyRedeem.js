@@ -7,12 +7,8 @@ import { redeemDicountVoucher } from "../actions/cartActions";
 const VoucherifyRedeemComponent = () => {
   const dispatch = useDispatch();
 
-  const handleDiscount = (discount) => {
-    dispatch(redeemDicountVoucher(discount));
-  };
-
   const onRedeemResponse = (response) => {
-    handleDiscount(response.voucher.discount.percent_off);
+    dispatch(redeemDicountVoucher(response.voucher.discount.percent_off))
   };
 
   const onErrorResponse = (error) => {

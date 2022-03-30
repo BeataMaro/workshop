@@ -26,10 +26,8 @@ const CartScreen = ({ match, location }) => {
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
-  // console.log(cartItems);
   const { discount } = cart;
-  console.log("wartość: ", discount);
-
+ 
   const qty = Number(location?.search?.split("=")[1]) || 1; //query params ?qty=4
   // const qty = location.search ? Number(location.search.split("=")[1]) : 1;
   //?qty=1

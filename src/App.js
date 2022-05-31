@@ -14,7 +14,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <PromoBar />
+        {/* <PromoBar /> */}
         <main className='py-3 justify-content-center'>
           <Switch>
             <Route path='/' exact component={BlogScreen} />
